@@ -1,5 +1,5 @@
 public class Cd_dvd extends Document {
-    public double duree;
+    private double duree;
 
     public Cd_dvd(String titre, String auteur, int code, int annee_publication, int nombre_exemplaire, String disponibilite, double duree){
         super(titre, auteur, code, annee_publication, nombre_exemplaire, disponibilite);
@@ -12,6 +12,14 @@ public class Cd_dvd extends Document {
         }else {
             disponibilite = "Rupture de stock";
         }
+    }
+
+    public void setDuree(double duree){
+        this.duree = duree;
+    }
+
+    public double getDuree(){
+        return this.duree;
     }
 
     public void information(){

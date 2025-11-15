@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public class Journal extends Document {
-    public LocalDate date_parution;
+    private LocalDate date_parution;
 
     public Journal(String titre, String auteur, int code, int annee_publication, int nombre_exemplaire, String disponibilite, LocalDate date_parution){
         super(titre, auteur, code, annee_publication, nombre_exemplaire, disponibilite);
@@ -14,6 +14,14 @@ public class Journal extends Document {
         }else {
             disponibilite = "Rupture de stock";
         }
+    }
+
+    public void setDate_parution(LocalDate date_parution){
+        this.date_parution = date_parution;
+    }
+
+    public LocalDate getDate_parution(){
+        return this.date_parution;
     }
 
     public void information(){

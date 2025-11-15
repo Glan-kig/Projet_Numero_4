@@ -1,5 +1,5 @@
 public class Magazine extends Document {
-    public int numero_edition;
+    private int numero_edition;
 
     public Magazine(String titre, String auteur, int code, int annee_publication, int nombre_exemplaire, String disponibilite, int numero_edition){
         super(titre, auteur, code, annee_publication, nombre_exemplaire, disponibilite);
@@ -12,6 +12,14 @@ public class Magazine extends Document {
         }else {
             disponibilite = "Rupture de stock";
         }
+    }
+
+    public void setNumero_edition(int numero_edition){
+        this.numero_edition = numero_edition;
+    }
+
+    public int getNumero_edition(){
+        return this.numero_edition;
     }
 
     public void information(){

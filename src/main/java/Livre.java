@@ -1,5 +1,5 @@
 public class Livre extends Document {
-    public int nombre_page;
+    private int nombre_page;
 
     public Livre(String titre, String auteur, int code, int annee_publication, int nombre_exemplaire, String disponibilite, int nombre_page){
         super(titre, auteur, code, annee_publication, nombre_exemplaire, disponibilite);
@@ -12,6 +12,14 @@ public class Livre extends Document {
         }else {
             disponibilite = "Rupture de stock";
         }
+    }
+
+    public void setNombre_page(int nombre_page){
+        this.nombre_page = nombre_page;
+    }
+
+    public int getNombre_page(){
+        return this.nombre_page;
     }
 
     public void information(){

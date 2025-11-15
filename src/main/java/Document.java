@@ -1,10 +1,10 @@
 public class Document {
-    public String titre;
-    public String auteur;
-    public int code;
-    public int annee_publication;
-    public int nombre_exemplaire;
-    public String disponibilite;
+    protected String titre;
+    protected String auteur;
+    protected int code;
+    protected int annee_publication;
+    protected int nombre_exemplaire;
+    protected String disponibilite;
 
     public Document(String titre, String auteur, int code, int annee_publication, int nombre_exemplaire, String disponibilite){
         this.titre = titre;
